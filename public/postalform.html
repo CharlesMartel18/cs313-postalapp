@@ -6,7 +6,7 @@
   <body>
     <h1>Postal Rate Calculator</h1>
     <form action="/getRate" method="GET" id='postalform'>
-      Weight: <input id='weight' name='weight' type='number'> oz
+      Weight: <input id='weight' name='weight' type='number' step='0.01' min='0'> oz
       <br /><br />
       <select id='pack_type' name='pack_type'>
         <option value="let_s">Letters (Stamped)</option>
