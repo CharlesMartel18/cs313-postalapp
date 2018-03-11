@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Postal Rate Calculator</title>
+  </head>
+  <body>
+    <h1>Postal Rate Calculator</h1>
+    <form action="/getRate" method="GET" id='postalform'>
+      Weight: <input id='weight' name='weight' type='number'> oz
+      <br /><br />
+      <select id='pack_type' name='pack_type'>
+        <option value="let_s">Letters (Stamped)</option>
+        <option value="let_m">Letters (Metered)</option>
+        <option value="flats">Large Envelopes (Flats)</option>
+        <option value="first">First-Class Package Service--Retail</option>
+      </select>
+      <br /><br />
+      <input type='submit' value='Calculate'>
+      <!--<button onclick="math_service()">Get JSON</button>-->
+    </form>
+    <!--<div id='math_service_box'></div>
+
+    <script>
+      function math_service() {
+        var req = new XMLHttpRequest();
+        var op = document.getElementById['operation'].value;
+        var op1 = document.getElementById['operand1'].value;
+        var op2 = document.getElementById['operand2'].value;
+        
+        req.open('GET', ('http://localhost:5000/math_service?operation=' + String(op) +
+          '&operand1=' + String(op1) + '&operand2=' + String(op2)) , true);
+        req.onreadystatechange = function() {
+          if (req.readyState == 4 && req.status == 200) {
+            res = JSON.parse(req.responseText);
+
+            document.head.title += (" & " + res.title);
+            document.getElementById['math_service_box'].innerHTML = 
+              "<h1>" + res.title + "</h1>" +
+              "<p>Operation: " + res.operation + 
+                "(" + res.operand1 + ", " + res.operand2 + ")</p>" +
+              "<p>Results: " + res.result + "</p>";
+          }
+        }
+        req.send();
+      }
+    </script>-->
+  </body>
+</html>

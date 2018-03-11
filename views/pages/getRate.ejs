@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Weight: <%= weight %></p>
+    <p>Parcel Type: <%= pack_type %></p>
+    <p>
+      <% if (cost != 0) { %>
+          Cost: <%= cost %> 
+        <% } else { %> 
+          Either your parcel weight is too much or something else went wrong. Please try again.
+      <% } %></p>
+  </body>
+</html>
