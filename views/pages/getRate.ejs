@@ -10,7 +10,7 @@
     <p>Parcel Type: <%= pack_type %></p>
     <p>
       <% if (cost != 0) { %>
-          Cost: <%= cost %> 
+          Cost: $<%= cost.toFixed(2) %> 
         <% } else { %> 
           Either your parcel weight is too much or something else went wrong. Please try again.
       <% } %></p>
